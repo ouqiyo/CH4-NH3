@@ -1,0 +1,32 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7-63349425784a
+Exec   : chemkinToFoam chemkin/grimech30.dat chemkin/thermo30.dat chemkin/transportProperties constant/reactionsGRI constant/thermo.compressibleGasGRI
+Date   : Dec 02 2024
+Time   : 14:27:42
+Host   : "ps"
+PID    : 740581
+I/O    : uncollated
+Case   : /home/xsj/lk/1126-1203/SandiaD_LTS_1
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+--> FOAM FATAL ERROR: 
+while reading CHEMKIN III file on line 1
+    expected 'ELEMENTS' or 'ELEM', 'SPECIES' or 'SPEC', 'THERMO' or 'THERMO ALL', 'REACTIONS' but found '"2"00.0THERMO ALL'
+
+    From function int Foam::chemkinReader::lex()
+    in file chemistryReaders/chemkinReader/chemkinLexer.L at line 1527.
+
+FOAM exiting
+
